@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="bg-gradient-light">
+<body>
 
     <?= $this->renderSection('content'); ?>
 
