@@ -29,7 +29,7 @@
                                         <?php if ($config->validFields === ['email']) : ?>
 
                                             <div class="form-group">
-                                                <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email Address">
+                                                <input name="login" type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email Address">
                                                 <div class="invalid-feedback">
                                                     <?= session('errors.login') ?>
                                                 </div>
@@ -39,7 +39,7 @@
 
                                             <div class="form-group">
                                                 
-                                                <input type="text" class="form-control form-control-user <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" name="login" placeholder="<?= lang('Auth.emailOrUsername') ?>">
+                                                <input type="text"  class="form-control form-control-user <?php if (session('errors.login')) : ?>is-invalid<?php endif ?>" name="login" placeholder="<?= lang('Auth.emailOrUsername') ?>">
                                                 <div class="invalid-feedback">
                                                     <?= session('errors.login') ?>
                                                 </div>
@@ -48,7 +48,7 @@
                                         <?php endif; ?>
 
                                             <div class="form-group">
-                                                <input type="password" class="form-control form-control-user <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.password')?>">
+                                                <input type="password" name="password" class="form-control form-control-user <?php if (session('errors.password')) : ?>is-invalid<?php endif ?>" placeholder="<?=lang('Auth.password')?>">
                                             </div>
 
                                         <?php if ($config->allowRemembering): ?>
@@ -63,9 +63,9 @@
 
                                         <?php endif; ?>
 
-                                        <a href="index.html" class="btn btn-success btn-user btn-block">
-                                            Login
-                                        </a>
+                                        <button type="submit" href="index.html" class="btn btn-success btn-user btn-block">
+                                        <?=lang('Auth.loginAction')?>
+                                                    </button>
 
                                     </form>
                                     <hr>
