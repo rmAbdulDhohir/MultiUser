@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
+
 class User extends BaseController
 {
     public function index()

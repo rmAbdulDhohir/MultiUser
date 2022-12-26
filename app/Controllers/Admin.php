@@ -39,10 +39,15 @@ class Admin extends BaseController
 
         $data['user'] = $query->getRow();
 
-        if(empty($data['user'])){
+        if (empty($data['user'])) {
             return redirect()->to('/admin');
         }
 
         return view('admin/detail', $data);
+    }
+
+    public function add()
+    {
+        return view('admin/add');
     }
 }
