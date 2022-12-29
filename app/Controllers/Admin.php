@@ -46,8 +46,23 @@ class Admin extends BaseController
         return view('admin/detail', $data);
     }
 
-    public function add()
+    public function create()
     {
-        return view('admin/add');
+        $data = ['title' => 'Form Tambah User'];
+        return view('admin/create', $data);
     }
+
+    public function save()
+    {
+        $this->userModel->save([
+        // dd($this -> request->getVar());
+        'image' => $this->request->getVar('image'),
+        'username' => $this->request->getVar('username'),
+        'fullname' => $this->request->getVar('fullname'),
+        'email' => $this->request->getVar('email'),
+        'password' => $this->request->getVar('password')
+
+        ]);
+        return redirect()->to('/admin');
+}
 }

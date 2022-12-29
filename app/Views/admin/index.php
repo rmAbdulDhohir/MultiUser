@@ -7,7 +7,7 @@
     <h1 class="h3 mb-4 text-gray-800">User List</h1>
     <div class="row justify-content-center">
         <div class="col-lg-8">
-        <a href="<?= base_url('admin/add'); ?>" class="btn btn-info my-3">Tambah User</a>
+        <a href="<?= base_url('admin/create'); ?>" class="btn btn-info my-3">Tambah User</a>
             <table class="table table-striped text-center">
                 <thead>
                     <tr>
